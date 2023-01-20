@@ -12,7 +12,7 @@ object Id {
 }
 
 @main
-def test(): Unit =
+def idTest(): Unit =
   val x = Id(1)
   val y = x.flatMap(z => Some(z + 1))
   val w = Id.idMonad.sequence(List(Id(1),Id(2),Id(3)))
