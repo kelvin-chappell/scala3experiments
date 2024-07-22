@@ -15,7 +15,7 @@ object Id {
 def idTest(): Unit =
   val x = Id(1)
   val y = x.flatMap(z => Some(z + 1))
-  val w = Id.idMonad.sequence(List(Id(1),Id(2),Id(3)))
-  val z2 = Id.idMonad.traverse(List(1,2,3))(p => Id(p +3))
+  val w = Id.idMonad.sequence(List(Id(1), Id(2), Id(3)))
+  val z2 = Id.idMonad.traverse(List(1, 2, 3))(p => Id(p + 3))
   val z = Id.idMonad.replicateM(5, Id(2))
   println(z)
