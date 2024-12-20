@@ -21,7 +21,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: guardian/setup-scala@v1
-        with:
-          cache: sbt
-      - name: Run tests
-        run: sbt test
+      - run: sbt test
