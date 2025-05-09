@@ -2,7 +2,7 @@ lazy val root = project
   .in(file("."))
   .settings(
     name := "scala3experiments",
-    scalaVersion := "3.3.5",
+    scalaVersion := "3.3.6",
     scalacOptions ++= Seq(
       "-deprecation"
     ),
