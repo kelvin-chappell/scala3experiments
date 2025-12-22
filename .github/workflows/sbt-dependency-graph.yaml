@@ -13,6 +13,6 @@ jobs:
       - uses: actions/checkout@v6
       - uses: guardian/setup-scala@v1
       - id: submit
-        uses: scalacenter/sbt-dependency-submission@768f9b6dc79b0f5f2d103a706681fa6e206b86bc # v3.2.0
+        uses: scalacenter/sbt-dependency-submission@f43202114d7522a4b233e052f82c2eea8d658134 # v3.2.1
       - name: Log snapshot for user validation
         run: cat ${{ steps.submit.outputs.snapshot-json-path }} | jq
