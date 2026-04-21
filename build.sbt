@@ -8,7 +8,7 @@ lazy val root = project
     ),
     libraryDependencies ++= Seq(
       "org.typelevel" %% "cats-effect" % "3.7.0",
-      "org.scalameta" %% "munit" % "1.2.4" % Test,
+      "org.scalameta" %% "munit" % "1.3.0" % Test,
       "org.typelevel" %% "munit-cats-effect" % "2.2.0" % Test,
       "org.typelevel" %% "scalacheck-effect" % "2.1.0" % Test
     )
