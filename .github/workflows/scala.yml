@@ -20,5 +20,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - uses: guardian/setup-scala@v1
+      - uses: guardian/setup-scala@v2
       - run: sbt test
