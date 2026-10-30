@@ -2,7 +2,6 @@
 name: Repository Quality Improver
 description: Daily analysis of repository quality focusing on a different software development lifecycle area each run
 on:
-  schedule: daily on weekdays
   workflow_dispatch:
 permissions:
   contents: read
