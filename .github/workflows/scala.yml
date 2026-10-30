@@ -27,4 +27,4 @@ jobs:
       - uses: sbt/setup-sbt@v1.5.13
         with:
           sbt-runner-version: 1.12.11
-      - run: sbt test
+      - run: sbt scalafmtCheckAll test
