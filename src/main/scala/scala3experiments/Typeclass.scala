@@ -26,13 +26,3 @@ given Show[Circle] with
   def show(c: Circle): String = s"Circle of radius ${c.radius}"
 given Show[Double] with
   def show(d: Double): String = d.toString
-
-// 4. Use
-@main
-def main(): Unit =
-  val shape1 = Rectangle(2, 3)
-  println(shape1.sho)
-  println(shape1.areaOf.sho)
-  val shape2 = Circle(2)
-  println(shape2.sho)
-  println(shape2.areaOf.sho)
