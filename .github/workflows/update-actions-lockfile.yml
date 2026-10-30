@@ -16,14 +16,21 @@ jobs:
   update:
     if: github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     env:
       GH_TOKEN: ${{ github.token }}
     steps:
+      - name: Check workflow update token
+        env:
+          ACTIONS_LOCK_TOKEN: ${{ secrets.ACTIONS_LOCK_TOKEN }}
+        run: |
+          if [ -z "$ACTIONS_LOCK_TOKEN" ]; then
+            echo "::error::Set the ACTIONS_LOCK_TOKEN repository secret to a token with Contents and Workflows write permissions (or repo and workflow scopes for a classic PAT)."
+            exit 1
+          fi
       - uses: actions/checkout@v7.0.1
         with:
           ref: ${{ github.event.pull_request.head.ref }}
+          token: ${{ secrets.ACTIONS_LOCK_TOKEN }}
           persist-credentials: true
       - name: Install actions-lock
         run: gh extension install github/gh-actions-lock
