@@ -21,4 +21,4 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: guardian/setup-scala@v2
-      - run: sbt test
+      - run: sbt scalafmtCheckAll test

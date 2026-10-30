@@ -4,12 +4,16 @@ lazy val root = project
     name := "scala3experiments",
     scalaVersion := "3.3.7",
     scalacOptions ++= Seq(
-      "-deprecation"
+      "-deprecation",
+      "-feature",
+      "-Wunused:all"
     ),
     libraryDependencies ++= Seq(
       "org.typelevel" %% "cats-effect" % "3.7.0",
       "org.scalameta" %% "munit" % "1.3.1" % Test,
+      "org.scalameta" %% "munit-scalacheck" % "1.3.1" % Test,
       "org.typelevel" %% "munit-cats-effect" % "2.2.0" % Test,
-      "org.typelevel" %% "scalacheck-effect" % "2.1.0" % Test
+      "org.typelevel" %% "scalacheck-effect" % "2.1.0" % Test,
+      "org.typelevel" %% "scalacheck-effect-munit" % "2.1.0" % Test
     )
   )
